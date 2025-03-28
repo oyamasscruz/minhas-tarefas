@@ -7,6 +7,7 @@ export const Aside = styled.aside`
 `
 
 export const GridFiltro = styled.div`
+  justify-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 8px;
