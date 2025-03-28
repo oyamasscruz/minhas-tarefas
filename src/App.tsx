@@ -6,7 +6,6 @@ function App() {
   return (
     <>
       <EstiloGlobal />
-      <h1>Olá React</h1>
       <Container>
         <BarraLateral />
         <ListaDeTarefas />
