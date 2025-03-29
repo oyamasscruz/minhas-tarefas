@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Props } from '.'
 
 export const Card = styled.div`
   margin-bottom: 32px;
@@ -17,9 +16,8 @@ export const Titulo = styled.h3`
   font-weight: bold;
   margin-bottom: 16px;
 `
-export const Tag = styled.span<Props>`
-  background-color: ${(props) =>
-    props.estado === 'pendente' ? '#F0C11A' : '#e1a32a'};
+export const Tag = styled.span`
+  background-color: #f0c11a;
   color: #fff;
   padding: 4px 8px;
   margin-right: 16px;
@@ -45,15 +43,14 @@ export const BarraAcoes = styled.div`
   padding-top: 16px;
   width: 100%;
 `
-export const Botao = styled.button<Props>`
+export const Botao = styled.button`
   font-size: 12px;
   font-weight: bold;
   color: #fff;
   padding: 8px 12px;
   border: none;
   cursor: pointer;
-  background-color: ${(props) =>
-    props.tipo === 'remover' ? '#C23616' : '#2F3640'};
+  background-color: #c23616;
   border-radius: 8px;
   margin-right: 8px;
 `
