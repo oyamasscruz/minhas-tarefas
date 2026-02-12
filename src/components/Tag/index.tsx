@@ -1,12 +1,33 @@
+import { Prioridade, Status } from '../../utils/Tarefa'
+
 type Props = {
-  legend?: string
+  priority: Prioridade
+  status: Status
 }
 
-const Tag = ({ legend }: Props) => {
+const cssPriorityClasses: Record<Prioridade, string> = {
+  [Prioridade.IMPORTANTE]: 'bg-orange-500',
+  [Prioridade.NORMAL]: 'bg-gray-400',
+  [Prioridade.URGENTE]: 'bg-red-600'
+}
+
+const cssStatusClasses: Record<Status, string> = {
+  [Status.CONCLUIDA]: 'bg-lime-400',
+  [Status.PENDENTE]: 'bg-yellow-400'
+}
+
+const Tag = ({ priority, status }: Props) => {
   return (
     <>
-      <span className="px-[8px] py-[4px] bg-orange-500 rounded-xl mr-[16px] text-white text-[8px] font-bold">
-        {legend}
+      <span
+        className={`"block px-[10px] py-[8px] rounded-xl mr-[16px] text-white text-[8px] font-bold" ${cssPriorityClasses[priority]}`}
+      >
+        {priority}
+      </span>
+      <span
+        className={`"block px-[10px] py-[8px] rounded-xl mr-[16px] text-white text-[8px] font-bold" ${cssStatusClasses[status]}`}
+      >
+        {status}
       </span>
     </>
   )

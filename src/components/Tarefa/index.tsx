@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Tag from '../Tag'
+import { Prioridade, Status } from '../../utils/Tarefa'
 
 const Tarefa = () => {
   const [isEditing, setIsEditing] = useState(false)
@@ -11,8 +12,7 @@ const Tarefa = () => {
     <div className="p-[40p x] w-full border-1 rounded-b-xl shadow-xl mb-[32px]">
       <h3 className="font-bold text-[18px] mb-[16px]">Estudar programação</h3>
       <div className="mb-[16px]">
-        <Tag legend="importante" />
-        <Tag legend="importante" />
+        <Tag priority={Prioridade.URGENTE} status={Status.CONCLUIDA} />
       </div>
       <textarea name="" id="" className="mb-[16px] resize-none">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aliquid
