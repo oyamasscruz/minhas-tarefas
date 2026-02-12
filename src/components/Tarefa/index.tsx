@@ -25,13 +25,13 @@ const Tarefa = () => {
           <>
             <button
               onClick={handleEditing}
-              className="mr-[8px] px-[12px] py-[6px] text-[12px] bg-black text-white rounded-xl"
+              className="mr-[8px] px-[12px] py-[6px] text-[12px] bg-green-500 text-white rounded-xl"
             >
               Salvar
             </button>
             <button
               onClick={handleEditing}
-              className="mr-[8px] px-[12px] py-[6px] text-[12px] bg-black text-white rounded-xl"
+              className="mr-[8px] px-[12px] py-[6px] text-[12px] bg-red-700 text-white rounded-xl"
             >
               Cancelar
             </button>
