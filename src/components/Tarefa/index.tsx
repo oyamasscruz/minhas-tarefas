@@ -5,8 +5,8 @@ import { Prioridade, Status } from '../../utils/Tarefa'
 type Taff = {
   title: string
   description: string
-  status?: Status
-  priority?: Prioridade
+  status: Status
+  priority: Prioridade
 }
 
 const Tarefa = ({ title, description, status, priority }: Taff) => {
