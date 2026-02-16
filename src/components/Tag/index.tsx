@@ -1,8 +1,8 @@
 import { Prioridade, Status } from '../../utils/Tarefa'
 
 type Props = {
-  priority: Prioridade
-  status: Status
+  priority?: Prioridade
+  status?: Status
 }
 
 const cssPriorityClasses: Record<Prioridade, string> = {
