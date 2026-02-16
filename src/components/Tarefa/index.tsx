@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Tag from '../Tag'
-import { Prioridade, Status } from '../../utils/Tarefa'
 import { useDispatch } from 'react-redux'
 import { remover, editar } from '../../store/reducers/tarefas'
 import TarefaClass from '../../models/Tarefa'
@@ -25,8 +24,6 @@ const Tarefa = ({ title, description, status, priority, id }: Taff) => {
         <>
           <textarea
             onChange={(event) => setTyping(event.target.value)}
-            name=""
-            id=""
             className="mb-[16px] resize-none"
           >
             {description}
@@ -61,8 +58,7 @@ const Tarefa = ({ title, description, status, priority, id }: Taff) => {
         <>
           <textarea
             value={description}
-            name=""
-            id=""
+            readOnly
             className="mb-[16px] resize-none"
           >
             {description}
