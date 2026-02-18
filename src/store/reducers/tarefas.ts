@@ -50,9 +50,20 @@ const tarefasSlice = createSlice({
       if (indexDaTarefa >= 0) {
         state.tarefas[indexDaTarefa] = action.payload
       }
+    },
+    cadastrar: (state, action: PayloadAction<Tarefa>) => {
+      const tarefaJaExiste = state.tarefas.find(
+        (item) =>
+          item.title.toLowerCase() === action.payload.title.toLocaleLowerCase()
+      )
+      if (tarefaJaExiste) {
+        alert('essa tarefa já existe!')
+      } else {
+        state.tarefas.push(action.payload)
+      }
     }
   }
 })
 
-export const { remover, editar } = tarefasSlice.actions
+export const { remover, editar, cadastrar } = tarefasSlice.actions
 export default tarefasSlice.reducer
